@@ -1,17 +1,24 @@
 const addButton = document.querySelector('.add-book')
-
 const myLibrary = []
 
-function newBook(name, author, pages, read) {
-    this.name
-    this.author
-    this.pages
-    this.read
+function newBook(name, author, pages) {
+    this.name = name
+    this.author = author
+    this.pages = pages
+    this.read = readResult() 
+    
+    function readResult() {
+        if (document.getElementById('yes').checked) {
+            return 'yes'
+        } else if (document.getElementById('no').checked) {
+            return 'no'
+        }
+    }
 }
 
 addButton.addEventListener('click', () => {
     const shadow = document.createElement('div')
-    
+
     document.querySelector('.add-book').classList.add('unclickable')
     shadow.classList.add('shadow')
     document.querySelector('.page-container').appendChild(shadow)
@@ -28,7 +35,7 @@ addButton.addEventListener('click', () => {
                                     </div>
                                     <div class="form-div">
                                         <label for="pages">Number of pages</label>
-                                        <input id="pages" type="text">
+                                        <input id="pages" type="number">
                                     </div>
                                 </fieldset>
                                 <fieldset class="read">
@@ -43,8 +50,29 @@ addButton.addEventListener('click', () => {
                                     </div>
                                 </fieldset>
                                 <div class="form-div">
-                                    <button type="submit">ADD</button>
+                                    <button id="submit" type="#">ADD</button>
                                 </div>
                             </form>
-                        </div>`      
+                        </div>`   
+                        
+    document.getElementById('submit').addEventListener('click', () => {
+        const name = document.getElementById('name').value
+        const author = document.getElementById('author').value
+        const pages = document.getElementById('pages').value
+        const obj = new newBook(name, author, pages)
+
+        if (name !== "" && author !== "" && pages !== "" && (document.getElementById('yes').checked || document.getElementById('no').checked)) {
+            myLibrary.unshift(obj)
+            shadow.innerHTML = ""
+            shadow.classList.remove('shadow')
+        } else {
+            alert('Please, fill all reauired fields. <3')
+        }
+    })
+
+    
 })
+
+
+
+
