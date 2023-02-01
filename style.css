@@ -143,3 +143,63 @@ table {
     box-shadow: 1px 1px 5px var(--clear)
 }
 
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, .5);
+    margin-top: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-div {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.form-read {
+    font-size: 2rem;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    padding: 1rem;
+}
+
+#yes {
+    margin: 0px;
+    align-self: center;
+    margin-left: 1rem;
+}
+
+.form {
+    background-color: transparent;
+    border: 1px solid var(--clear);
+    box-shadow: 1px 1px 200rem var(--clear);
+    padding: 5rem 2rem 5rem 2rem;
+    border-radius: 2rem;
+    color: var(--clear);
+}
+
+.form-div > input {
+    margin-top: 1rem;
+}
+
+#submit {
+    all: unset;
+    align-self: center;
+    margin-top: 20%;
+    font-weight: bold;
+    text-shadow: 1px 1px 0.5rem var(--dark);
+}
+
+#submit:hover {
+    text-shadow: 1px 1px 0.5rem var(--clear);
+}
+
+#submit:focus {
+    color: rgba(0, 0, 0, .5);
+}
