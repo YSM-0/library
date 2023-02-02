@@ -143,6 +143,79 @@ table {
     box-shadow: 1px 1px 5px var(--clear)
 }
 
+.card {
+    background-color: rgba(0, 0, 0, .7);
+    border-radius: 2rem;
+    margin: 5%;
+    min-height: 300px;
+    max-height: 50%;
+    text-align: center;  
+    color: var(--clear);
+    font-size: 1.8rem; 
+    border: 1px solid var(--orange);
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+    align-items: center;
+}
+
+.card:hover {
+    border: 1px solid var(--orange);
+    box-shadow: 1px 0px 10px var(--clear);
+}
+
+.name {
+    font-weight: bold;
+    text-transform: capitalize;
+    text-shadow: 1px 1px 5px var(--clear);
+}
+
+.author {
+    text-transform: capitalize;
+    color: var(--orange);
+    font-style: italic;
+}
+
+.pages {
+    text-transform: capitalize;
+    color: var(--clear);
+}
+
+.read-button{
+    all: unset;
+}
+
+.tick-true{
+    width: 6rem;
+    height: 2.5rem;
+    background-color: green;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    transition: 100ms;
+}
+
+.tick-false{
+    width: 6rem;
+    height: 2.5rem;
+    background-color: red;
+    border-radius: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    transition: 100ms;
+}
+
+.tack{
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--clear);
+    border-radius: 10rem;
+    margin-left: 5%;
+    margin-right: 5%;
+    box-shadow: 1px 2px 10px var(--dark);
+}
+
 .shadow {
     position: absolute;
     width: 100%;
@@ -186,6 +259,12 @@ table {
 
 .form-div > input {
     margin-top: 1rem;
+    border-radius: 10rem;
+    background-color: rgba(0, 0, 0, .5);
+    height: 1.5rem;
+    text-align: center;
+    color: var(--clear);
+    font-weight: bold;
 }
 
 #submit {
@@ -202,4 +281,18 @@ table {
 
 #submit:focus {
     color: rgba(0, 0, 0, .5);
+}
+
+.remove-button {
+    all: unset;
+}
+
+.remove-icon {
+    height: 2.5rem;
+    width: 2.5rem;
+    background-image: url(/images/gaspillage.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-left: 1rem;
+    align-self: center;
 }
