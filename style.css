@@ -92,7 +92,7 @@ table {
 
 .main-content {
     height: 90vh;
-    background-image: url("/images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg");
+    background-image: url("images/patrick-tomasso-Oaqk7qqNh_c-unsplash.jpg");
     background-size: cover;
     overflow-y: auto;
 }
@@ -275,8 +275,20 @@ table {
     text-shadow: 1px 1px 0.5rem var(--dark);
 }
 
+#cancel {
+    all: unset;
+    align-self: center;
+    margin-top: 20%;
+    font-weight: bold;
+    text-shadow: 1px 1px 0.5rem var(--dark);
+}
+
+#cancel:hover {
+    text-shadow: 1px 1px 0.5rem red;
+}
+
 #submit:hover {
-    text-shadow: 1px 1px 0.5rem var(--clear);
+    text-shadow: 1px 1px 0.5rem green;
 }
 
 #submit:focus {
@@ -290,7 +302,7 @@ table {
 .remove-icon {
     height: 2.5rem;
     width: 2.5rem;
-    background-image: url(/images/gaspillage.png);
+    background-image: url(images/gaspillage.png);
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: 1rem;

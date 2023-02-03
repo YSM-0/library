@@ -119,6 +119,7 @@ function displayForm() {
             </div>
         <div class="form-div">
             <button id="submit" type="button">ADD</button>
+            <button id="cancel" type="button">CANCEL</button>
         </div>
       </form>
     </div>`
@@ -127,6 +128,10 @@ function displayForm() {
       addBookToLibrary()
       document.querySelector('.shadow').remove()
       addCard()
+    })
+
+    document.querySelector('#cancel').addEventListener('click', () => {
+      document.querySelector('.shadow').remove()
     })
 }
 
